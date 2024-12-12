@@ -1,107 +1,117 @@
 /* Login Container */
 .login-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  height: 100vh;           /* Full screen height */
-  width: 100vw;            /* Full screen width */
-  background-color: #f4f6f9;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d1f7d6; /* Soft green background */
   padding: 20px;
-  box-sizing: border-box;  /* To include padding in width/height calculation */
-  position: relative;      /* Ensure correct centering within the viewport */
-  flex-direction: column;  /* Arrange content in a column */
+  box-sizing: border-box;
+  position: relative;
+  flex-direction: column;
 }
 
 /* Login Form */
 .login-form {
-  background: rgba(255, 255, 255, 0.2);  /* Slightly transparent background */
-  backdrop-filter: blur(8px);  /* Glass effect */
-  padding: 80px 60px;  /* Increased padding for a larger form */
+  background: rgba(0, 128, 0, 0.2); /* Transparent green background for the glass effect */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 80px 60px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid black; /* Black border for contrast */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 600px;  /* Max width for the form */
+  max-width: 600px;
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;  /* To ensure padding is accounted for */
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content within the form */
+  align-items: center;
   justify-content: center;
 }
 
 /* Logo */
 .logo-container {
-  margin-top: 10px;  /* Adjust the spacing below the "Login" text */
-  margin-bottom: 20px; /* Space between the logo and form fields */
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .logo {
-  color: #3489db;  /* Blue color for the logo */
-  font-size: 48px;  /* Larger logo size */
+  color: #228b22; /* Deep green for the logo */
+  font-size: 48px;
 }
 
 /* Form Heading */
 .login-form h2 {
-  color: #3489db;
-  font-size: 36px;  /* Larger font for the title */
-  margin-bottom: 20px;  /* Less space between heading and logo */
+  color: #228b22; /* Deep green heading */
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 /* Form Inputs */
 .login-form input {
   width: 100%;
-  padding: 20px;  /* Increased padding for larger inputs */
-  margin: 16px 0;  /* More margin between inputs */
-  font-size: 18px;  /* Larger font size */
+  padding: 20px;
+  margin: 16px 0;
+  font-size: 18px;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;  /* To include padding in width calculation */
+  border: 2px solid black; /* Black border for inputs */
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5); /* Slightly transparent background */
+  color: black;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #228b22; /* Highlight border with green on focus */
+  box-shadow: 0 0 8px #228b22;
 }
 
 /* Buttons */
 .login-button,
 .register-button {
   width: 100%;
-  padding: 20px;  /* Increased padding for larger buttons */
-  font-size: 20px;  /* Larger font size */
+  padding: 20px;
+  font-size: 20px;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 30px;  /* More space between buttons */
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 30px;
 }
 
 .login-button {
-  background-color: #3489db;
+  background-color: #228b22; /* Green button */
 }
 
 .login-button:hover {
-  background-color: #2177b8;
+  background-color: #1c7b1c; /* Darker green on hover */
+  transform: scale(1.02); /* Subtle zoom effect */
 }
 
 .register-button {
-  background-color: #e74c3c;
+  background-color: black; /* Black button for contrast */
 }
 
 .register-button:hover {
-  background-color: #c0392b;
+  background-color: #333333; /* Darker black on hover */
+  transform: scale(1.02);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .login-form {
     width: 90%;
-    padding: 40px;  /* Slightly less padding on smaller screens */
+    padding: 40px;
   }
 
   .login-form h2 {
-    font-size: 28px;  /* Smaller title on mobile */
+    font-size: 28px;
   }
 
   .login-button,
   .register-button {
-    font-size: 18px;  /* Adjusted font size on mobile */
+    font-size: 18px;
   }
 }

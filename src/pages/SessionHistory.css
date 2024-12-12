@@ -1,0 +1,108 @@
+/* Session History Container */
+.session-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #e8f5e9; /* Light green background */
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header */
+  .session-history-header {
+    font-size: 2.5rem;
+    color: #32cd32; /* Lime green */
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* History List */
+  .session-history-list {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(144, 238, 144, 0.7); /* Glassy effect */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 2px solid #32cd32; /* Lime green border */
+    overflow-y: auto;
+    max-height: 400px; /* Optional scroll for large history */
+  }
+  
+  /* Individual Session Card */
+  .session-card {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid #32cd32;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .session-card p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #228b22; /* Forest green */
+  }
+  
+  .session-card strong {
+    color: #32cd32; /* Lime green */
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Back Button */
+  .back-button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    background-color: #32cd32; /* Lime green */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #228b22; /* Forest green hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Loading State */
+  .loading {
+    font-size: 1.5rem;
+    color: #228b22; /* Forest green */
+    text-align: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .session-history-container {
+      padding: 20px;
+    }
+  
+    .session-history-list {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .back-button {
+      font-size: 1.2rem;
+      padding: 12px;
+    }
+  }
+  

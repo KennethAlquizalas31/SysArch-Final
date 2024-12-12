@@ -35,7 +35,10 @@ const Login = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleLogin} className="login-form">
-        <h2>Login</h2>
+        <h2></h2>
+        <h2></h2>
+        <h2>Welcome to MoodWatch</h2>
+        <h2>LOGIN</h2>
 
         {/* Logo below "Login" heading */}
         <div className="logo-container">

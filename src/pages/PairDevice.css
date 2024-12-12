@@ -1,0 +1,91 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Consistent font across the app */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #91df91, #8fe5b3); /* Dark green-black gradient */
+    color: #e8f5e9; /* Light green text color for readability */
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+.pair-device-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: rgba(144, 238, 144, 0.7); /* Light green glassy effect */
+    border-radius: 15px;
+    padding: 50px;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 2px solid #32cd32; /* Lime green border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .pair-device-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #228b22; /* Forest green */
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .pair-device-content,
+  .pair-device-confirmation {
+    text-align: center;
+  }
+  
+  .pair-device-content p,
+  .pair-device-confirmation p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #006400; /* Dark green */
+    margin-bottom: 30px;
+  }
+  
+  .connect-button,
+  .ok-button {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(145deg, #32cd32, #228b22); /* Gradient green button */
+    border: 2px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  .connect-button:hover,
+  .ok-button:hover {
+    background: linear-gradient(145deg, #228b22, #006400); /* Darker gradient on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #006400; /* Dark green border on hover */
+  }
+  
+  .connect-button:disabled {
+    background: #8fbc8f; /* Dull green when disabled */
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 768px) {
+    .pair-device-container {
+      padding: 20px;
+    }
+  
+    .pair-device-header {
+      font-size: 2rem;
+    }
+  
+    .connect-button,
+    .ok-button {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+  }
+  

@@ -6,6 +6,7 @@
   justify-content: center;
   padding-left: 300px;
   transition: padding-left 0.3s ease;
+  background-color: #e8f5e9; /* Light green background */
 }
 
 .dashboard-container.sidebar-hidden {
@@ -18,9 +19,11 @@
   min-height: 80vh;
   margin: 0 auto;
   padding: 50px;
-  background-color: #f4f7fc;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: rgba(144, 238, 144, 0.7); /* Light green glassy effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border: 2px solid #32cd32; /* Lime green border */
+  backdrop-filter: blur(10px); /* Glassy effect */
 }
 
 .dashboard-header {
@@ -29,7 +32,7 @@
 
 .dashboard-header .user-icon {
   font-size: 80px; /* Adjust icon size */
-  color: #2c3e50; /* Set icon color */
+  color: #32cd32; /* Lime green icon */
   display: block;
   margin: 0 auto 20px; /* Centers icon and adds space below */
 }
@@ -37,7 +40,7 @@
 .dashboard-content h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
-  color: #2c3e50;
+  color: #228b22; /* Forest green text */
   font-weight: 600;
   text-transform: capitalize;
   margin-bottom: 30px;
@@ -53,7 +56,7 @@
 }
 
 .stat-card {
-  background: linear-gradient(145deg, #56ccf2, #6e7ebf);
+  background: linear-gradient(145deg, #98fb98, #8fbc8f); /* Gradient with light green tones */
   color: white;
   padding: 35px;
   border-radius: 15px;
@@ -67,7 +70,7 @@
 .stat-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: 2px solid #3498db;
+  border: 2px solid #32cd32; /* Lime green border on hover */
 }
 
 .stat-card h4 {
@@ -80,7 +83,7 @@
   display: inline-block;
   margin-top: 30px;
   padding: 15px 40px;
-  background-color: #56ccf2;
+  background-color: #32cd32; /* Lime green button */
   color: white;
   font-size: 1.2rem;
   font-weight: 700;
@@ -93,10 +96,10 @@
 }
 
 .profile-nav-link:hover {
-  background-color: #3498db;
+  background-color: #228b22; /* Forest green hover effect */
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  border: 2px solid #3498db;
+  border: 2px solid #228b22; /* Forest green border on hover */
 }
 
 .profile-nav-link::after {
@@ -152,5 +155,11 @@
   .profile-nav-link {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+
+  .dashboard-logo {
+    width: 20px; /* Adjust this value to reduce the size */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 15px; /* Adjust spacing as needed */
   }
 }

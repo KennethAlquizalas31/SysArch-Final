@@ -1,6 +1,7 @@
 // backend/middleware/authMiddleware.js
 import jwt from 'jsonwebtoken';
 
+// Define the authenticate function
 const authenticate = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) return res.status(403).send('Token is required');
@@ -15,4 +16,8 @@ const authenticate = (req, res, next) => {
   }
 };
 
+// Named export
+export { authenticate };
+
+// Default export (you can use whichever import style you prefer in other files)
 export default authenticate;

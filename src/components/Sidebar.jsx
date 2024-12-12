@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
+import { FaHome, FaUserAlt, FaSignOutAlt, FaCalendarAlt, FaHistory } from 'react-icons/fa'; // Import the history icon
 
 const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control the opening and closing of the menu
@@ -33,29 +34,32 @@ const Sidebar = () => {
       </div>
 
       <ul className={`sidebar-links ${isMenuOpen ? 'open' : ''}`}>
-        {/* Dashboard and Profile links on top */}
         <li>
-          <button onClick={() => navigate('/dashboard')}>Dashboard</button>
+          <button onClick={() => navigate('/dashboard')}>
+            <FaHome className="menu-icon" /> Dashboard
+          </button>
         </li>
         <li>
-          <button onClick={() => navigate('/profile')}>Profile</button>
+          <button onClick={() => navigate('/profile')}>
+            <FaUserAlt className="menu-icon" /> Profile
+          </button>
         </li>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <li>
+          <button onClick={() => navigate('/session')}>
+            <FaCalendarAlt className="menu-icon" /> Session
+          </button>
+        </li>
+        <li>
+          <button onClick={() => navigate('/session-history')}>
+            <FaHistory className="menu-icon" /> Session History
+          </button>
+        </li>
+        <br /><br /><br /><br /><br /><br /><br />
         {/* Logout button at the bottom */}
         <li className="logout">
-          <button onClick={handleLogout} className="logout-button">Logout</button>
+          <button onClick={handleLogout} className="logout-button">
+            <FaSignOutAlt className="menu-icon" /> Logout
+          </button>
         </li>
       </ul>
     </div>

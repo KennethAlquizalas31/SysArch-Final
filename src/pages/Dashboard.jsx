@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import './Dashboard.css';
-import { FaDollarSign, FaBox, FaClipboardList, FaMale, FaFemale, FaUsers } from 'react-icons/fa'; // Import relevant icons
+import { FaUserClock, FaWifi, FaHandHoldingHeart, FaMale, FaFemale, FaUsers } from 'react-icons/fa'; // Updated icons
 import axios from 'axios';
 
 const Dashboard = () => {
@@ -53,16 +53,22 @@ const Dashboard = () => {
         <div className="dashboard-main">
           <div className="dashboard-stats">
             <div className="stat-card">
-              <FaDollarSign size={40} />
-              <h4>Sales</h4>
+            <Link to="/session">
+              <FaUserClock size={40} />
+              <h4>Session</h4>
+              </Link>
             </div>
             <div className="stat-card">
-              <FaClipboardList size={40} />
-              <h4>Orders</h4>
+            <Link to="/pair-device">
+              <FaWifi size={40} />
+              <h4>Pair Device</h4>
+              </Link>
             </div>
             <div className="stat-card">
-              <FaBox size={40} />
-              <h4>Products</h4>
+            <Link to="/donation">
+              <FaHandHoldingHeart size={40} />
+              <h4>Donation</h4>
+              </Link>
             </div>
           </div>
         </div>

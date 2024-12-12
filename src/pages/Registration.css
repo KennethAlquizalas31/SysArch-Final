@@ -2,111 +2,130 @@
 .registration-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the top to give more space below */
+  align-items: flex-start; /* Align items to the top to allow space below */
   height: 100vh; /* Full screen height */
-  width: 100vw;  /* Full screen width */
+  width: 100vw; /* Full screen width */
+  background-color: #e8f5e9; /* Light green background */
   padding: 20px;
   box-sizing: border-box; /* To include padding in width/height calculation */
 }
 
 /* Registration Form */
 .registration-form {
-  background-color: #fff;
-  padding: 30px 50px; /* Slightly smaller padding */
+  background: rgba(144, 238, 144, 0.7); /* Semi-transparent light green for the glass effect */
+  backdrop-filter: blur(10px); /* Glassy effect */
+  padding: 60px 40px; /* Padding for better spacing */
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid black; /* Black border for contrast */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   width: 100%;
-  max-width: 600px; /* Increased max width for the form */
+  max-width: 600px; /* Limit the maximum width */
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box; /* To ensure padding is accounted for */
   text-align: center;
-  margin-top: 50px; /* Move form down */
+  margin-top: 50px; /* Center the form vertically */
+  box-sizing: border-box;
 }
 
 /* Logo Container */
 .logo-container {
-  margin-top: 20px; /* Space between logo and form fields */
-  margin-bottom: 20px; /* Space between the logo and form fields */
+  margin-top: 10px; /* Adjust spacing for the logo */
+  margin-bottom: 20px; /* Space between logo and form fields */
+}
+
+.logo {
+  color: #32cd32; /* Lime green for the logo */
+  font-size: 48px;
 }
 
 /* Form Header */
 .registration-form h2 {
-  color: #3489db;
-  font-size: 36px; /* Adjust font size for better visibility */
-  margin-bottom: 10px; /* Reduced margin bottom to lower the title */
+  color: #32cd32; /* Lime green heading */
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 /* Form Inputs */
 .registration-form input {
   width: 100%;
-  padding: 15px; /* Increased padding for input fields */
-  margin: 12px 0; /* Slightly more margin between inputs */
-  font-size: 18px; /* Increased font size for a better feel */
+  padding: 15px; /* Comfortable padding for input fields */
+  margin: 16px 0; /* Space between inputs */
+  font-size: 18px; /* Readable font size */
   border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box; /* To include padding in width calculation */
+  border: 2px solid black; /* Black border for inputs */
+  background: rgba(255, 255, 255, 0.8); /* White transparent background */
+  color: black; /* Black text for contrast */
+  box-sizing: border-box;
+}
+
+.registration-form input:focus {
+  outline: none;
+  border-color: #32cd32; /* Lime green focus border */
+  box-shadow: 0 0 8px #32cd32;
 }
 
 /* Register Button */
 .register-button {
   width: 100%;
-  padding: 14px; /* Increased padding for the button */
-  font-size: 20px; /* Slightly larger font size */
+  padding: 16px; /* Comfortable padding for the button */
+  font-size: 20px;
   color: white;
   border: none;
   border-radius: 8px;
+  background-color: #32cd32; /* Lime green button */
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 30px; /* Adjusted space between inputs and button */
-  background-color: #3489db;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 30px;
 }
 
 .register-button:hover {
-  background-color: #2177b8; /* Darker blue for hover */
+  background-color: #228b22; /* Forest green hover effect */
+  transform: scale(1.02); /* Subtle zoom effect */
 }
 
 /* Login Redirect Section */
 .login-redirect {
   text-align: center;
-  margin-top: 20px; /* Adjusted space before the redirect section */
+  margin-top: 20px;
 }
 
 .login-redirect p {
   font-size: 16px;
-  color: #777;
-  margin-bottom: 10px; /* Slight spacing before the button */
+  color: black; /* Black text for contrast */
+  margin-bottom: 10px;
 }
 
 .login-redirect button {
   padding: 12px 22px;
   font-size: 18px;
   border: none;
-  background-color: #c0392b;
+  background-color: black; /* Black button for contrast */
   color: white;
   cursor: pointer;
   border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .login-redirect button:hover {
-  background-color: #c0392b;
+  background-color: #333333; /* Darker black hover effect */
+  transform: scale(1.02);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .registration-form {
     width: 90%;
-    padding: 25px; /* Slightly reduced padding for smaller screens */
+    padding: 25px; /* Adjust padding for smaller screens */
   }
 
   .registration-form h2 {
-    font-size: 26px; /* Slightly smaller title on mobile */
+    font-size: 28px; /* Reduce title size for mobile */
   }
 
   .register-button {
-    font-size: 18px; /* Adjusted button font size on mobile */
+    font-size: 18px; /* Adjust button font size */
   }
 
   .login-redirect button {
-    font-size: 16px; /* Adjusted font size of the login button */
+    font-size: 16px; /* Adjust button font size for mobile */
   }
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { FaMale, FaFemale, FaUsers } from 'react-icons/fa'; // Importing male, female, and other icons
 import './Profile.css';
-import { FaMale, FaFemale, FaUsers } from 'react-icons/fa';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -28,7 +28,7 @@ const Profile = () => {
     } else {
       const fetchProfile = async () => {
         try {
-          const { data } = await axios.get('/api/profile', {
+          const { data } = await axios.get('http://localhost:5000/api/profile', {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           });
           setProfile(data);
@@ -69,7 +69,7 @@ const Profile = () => {
     const updatedData = { name, sex, address, birthdate, age };
 
     try {
-      await axios.put('http://localhost:5000/api/profile', updatedData, {
+      const response = await axios.put('http://localhost:5000/api/profile', updatedData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'application/json',
@@ -88,30 +88,29 @@ const Profile = () => {
     }
   };
 
-  // Function to render gender icon based on sex value
-  const renderGenderIcon = () => {
+  // Function to render logo based on gender with distinct hair styles for male and female
+  const renderProfileLogo = () => {
     if (sex === 'Male') {
-      return <FaMale className="gender-icon" />;
+      return <FaMale className="profile-logo male" size={80} color="#00ff00" />;
     } else if (sex === 'Female') {
-      return <FaFemale className="gender-icon" />;
-    } else {
-      return <FaUsers className="gender-icon" />;
+      return <FaFemale className="profile-logo female" size={80} color="#00ff00" />;
+    } else if (sex === 'Other') {
+      return <FaUsers className="profile-logo other" size={80} color="#00ff00" />;
     }
+    return null;
   };
 
   return (
     <div className="profile-container">
       <div className="profile-header">
-        <h2>{isEditing ? 'Edit Profile' : 'Profile'}</h2>
+        <h2>{isEditing ? 'Edit Profile' : ''}</h2>
       </div>
 
-      {/* Profile Information */}
       {profile && !isEditing && (
         <div className="profile-info">
           <div className="info-card">
-            <h2>Profile Information</h2>
-            {renderGenderIcon()} {/* Display gender icon above the name */}
-            <p><strong>Name:</strong> {profile.name}</p>
+            {renderProfileLogo()} {/* Render the profile picture logo */}
+            <h2 className="profile-name">{profile.name}</h2> {/* Display profile name */}
             <p><strong>Sex:</strong> {profile.sex}</p>
             <p><strong>Address:</strong> {profile.address}</p>
             <p><strong>Birthdate:</strong> {profile.birthdate}</p>
@@ -122,7 +121,6 @@ const Profile = () => {
         </div>
       )}
 
-      {/* Edit Profile Form */}
       {isEditing && profile && (
         <form onSubmit={handleProfileUpdate} className="edit-form">
           <div className="form-group">

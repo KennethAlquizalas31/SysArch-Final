@@ -1,0 +1,187 @@
+/* Session Container */
+.session-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #e8f5e9; /* Light green background */
+  min-height: 100vh;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.session-header {
+  font-size: 2.5rem;
+  color: #32cd32; /* Lime green */
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Container */
+.session-form-container {
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  background: rgba(144, 238, 144, 0.7); /* Glassy effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Glassy effect */
+  border: 2px solid #32cd32; /* Lime green border */
+}
+
+.form-header {
+  font-size: 1.8rem;
+  color: #32cd32; /* Lime green */
+  margin-bottom: 15px;
+}
+
+.counselor-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.counselor-list li {
+  margin: 10px 0;
+  font-size: 1.5rem; /* Font size for list items */
+  color: #32cd32; /* Lime green */
+}
+
+.counselor-list strong {
+  font-size: 1.6rem; /* Larger font size for counselor name */
+  font-weight: bold;
+  color: #32cd32; /* Lime green */
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 1.5rem; /* Font size for label */
+  color: #32cd32; /* Lime green */
+  font-weight: bold;
+}
+
+.input-field {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #32cd32;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  color: #32cd32; /* Lime green for input text */
+}
+
+.book-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.4rem;
+  background-color: #32cd32; /* Lime green */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #228b22; /* Forest green hover effect */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.confirmation h3 {
+  font-size: 2rem;
+  color: #32cd32; /* Lime green */
+}
+
+.confirmation p {
+  font-size: 1.2rem;
+  color: #32cd32; /* Lime green */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .session-container {
+    padding: 20px;
+  }
+
+  .session-form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .book-button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+}
+
+/* Style for Counselor Informations header */
+.form-header {
+  font-size: 2.2rem; /* Increase font size */
+  color: #32cd32; /* Lime green */
+  margin-bottom: 20px;
+  font-weight: bold; /* Make it bold */
+}
+
+/* Style for Counselor details */
+.counselor-list li {
+  font-size: 1.5rem; /* Increase font size */
+  color: #32cd32; /* Lime green */
+  margin: 15px 0;
+  line-height: 1.6; /* Add spacing between lines */
+}
+
+.counselor-list strong {
+  font-size: 1.6rem; /* Larger font size for counselor name */
+  font-weight: bold; /* Make counselor names bold */
+  color: #32cd32; /* Lime green */
+}
+
+/* Style for Booking Date label */
+.input-group label {
+  font-size: 1.5rem; /* Increase font size for label */
+  color: #32cd32; /* Lime green */
+  font-weight: bold; /* Make the label bold */
+}
+h2 {
+color: #db7e14;
+}
+/* Counselor Card */
+.counselor-card {
+  padding: 20px;
+  margin: 15px 0;
+  background: rgba(50, 205, 50, 0.2); /* Light green */
+  border: 2px solid #32cd32; /* Lime green border */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counselor-card:hover {
+  background: rgba(50, 205, 50, 0.4); /* Darker green hover effect */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counselor-card.selected {
+  background: #32cd32; /* Fully lime green */
+  color: white; /* White text for selected card */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .counselor-card {
+    padding: 15px;
+  }
+}

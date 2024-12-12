@@ -2,95 +2,97 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f7fc; /* Light background for visibility */
-  font-family: Arial, sans-serif; /* Optional: for clean font style */
+  background-color: #f0fdf4; /* Light green background */
+  font-family: Arial, sans-serif;
 }
 
 /* Profile header and back button */
 .profile-header {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px; /* Increased margin */
+  margin-bottom: 40px;
 }
 
 .profile-header h2 {
-  font-size: 3rem; /* Larger title */
-  color: #333;
+  font-size: 3rem;
+  color: #4CAF50; /* Light green for header */
   margin-bottom: 20px;
 }
 
 .back-button {
-  padding: 15px 30px; /* Increased padding */
+  padding: 15px 30px;
   margin-top: 20px;
-  background-color: #00BFFF; /* Vibrant Skyblue color */
-  color: white;
+  background-color: #81C784; /* Light green */
+  color: #000; /* Black text for contrast */
   border: none;
-  border-radius: 8px; /* Larger border radius */
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1.5rem; /* Larger font size */
+  font-size: 1.5rem;
 }
 
 .back-button:hover {
-  background-color: #009ACD; /* Darker shade of Skyblue for hover effect */
+  background-color: #66BB6A; /* Slightly darker shade of light green */
+  color: #fff; /* White text on hover */
 }
 
 /* Profile information card */
 .profile-info {
   width: 100%;
-  max-width: 1000px; /* Increased max width */
+  max-width: 1000px;
   margin-top: 40px;
   padding: 30px;
-  background-color: #ffffff;
-  border-radius: 12px; /* Larger border radius */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .profile-info .info-card p {
-  font-size: 1.5rem; /* Larger font size */
+  font-size: 1.5rem;
   margin-bottom: 15px;
+  color: #000; /* Black text for profile details */
 }
 
-/* Center the "Edit Profile" button */
 .profile-info .info-card {
   display: flex;
   flex-direction: column;
-  align-items: center; /* This centers the button */
-  text-align: center; /* Align the text in the container */
+  align-items: center;
+  text-align: center;
 }
 
 .edit-button {
-  padding: 15px 30px; /* Increased padding */
+  padding: 15px 30px;
   margin-top: 20px;
-  background-color: #00BFFF; /* Vibrant Skyblue color */
-  color: white;
+  background-color: #81C784; /* Light green */
+  color: #000; /* Black text for contrast */
   border: none;
-  border-radius: 8px; /* Larger border radius */
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1.5rem; /* Larger font size */
-  width: auto; /* Ensure it's not stretched */
+  font-size: 1.5rem;
+  width: auto;
 }
 
 .edit-button:hover {
-  background-color: #009ACD; /* Darker shade of Skyblue for hover effect */
+  background-color: #66BB6A; /* Slightly darker shade of light green */
+  color: #fff; /* White text on hover */
 }
 
 /* Form for editing profile */
 .edit-form {
   width: 100%;
-  max-width: 1000px; /* Increased max width */
+  max-width: 1000px;
   padding: 30px;
-  background-color: #ffffff;
-  border-radius: 12px; /* Larger border radius */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow */
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Increased gap */
-  align-items: center; /* Centers the form elements horizontally */
+  gap: 30px;
+  align-items: center;
 }
 
 .edit-form .form-group {
@@ -100,43 +102,45 @@ html, body {
 }
 
 .edit-form label {
-  font-size: 1.2rem; /* Larger label font */
-  color: #333;
-  margin-bottom: 10px; /* Added bottom margin for spacing */
+  font-size: 1.2rem;
+  color: #4CAF50; /* Light green for labels */
+  margin-bottom: 10px;
 }
 
 .edit-form input, .edit-form select {
-  padding: 15px; /* Increased padding */
-  font-size: 1.3rem; /* Larger font size */
-  border: 1px solid #ccc;
-  border-radius: 8px; /* Larger border radius */
-  width: 100%; /* Make inputs full width */
+  padding: 15px;
+  font-size: 1.3rem;
+  border: 1px solid #81C784; /* Light green border */
+  border-radius: 8px;
+  width: 100%;
   box-sizing: border-box;
+  color: #000; /* Black text for input and select */
 }
 
 .update-button {
-  padding: 15px 30px; /* Increased padding */
-  background-color: #00BFFF; /* Vibrant Skyblue color */
-  color: white;
+  padding: 15px 30px;
+  background-color: #81C784; /* Light green */
+  color: #000; /* Black text for contrast */
   border: none;
-  border-radius: 8px; /* Larger border radius */
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1.5rem; /* Larger font size */
-  align-self: center; /* Center the button within the form */
+  font-size: 1.5rem;
+  align-self: center;
 }
 
 .update-button:hover {
-  background-color: #009ACD; /* Darker shade of Skyblue for hover effect */
+  background-color: #66BB6A; /* Slightly darker shade of light green */
+  color: #fff; /* White text on hover */
 }
 
 /* Media Query for small screens (responsive layout) */
 @media (max-width: 768px) {
   html, body {
-    padding: 20px; /* Increased padding for mobile */
+    padding: 20px;
   }
 
   .profile-header h2 {
-    font-size: 2.5rem; /* Smaller, but still large */
+    font-size: 2.5rem;
   }
 
   .profile-info, .edit-form {
@@ -145,18 +149,23 @@ html, body {
   }
 
   .edit-form input, .edit-form select {
-    font-size: 1.2rem; /* Slightly smaller font for mobile */
+    font-size: 1.2rem;
   }
 
   .update-button, .back-button, .edit-button {
-    font-size: 1.3rem; /* Adjusted button font size */
-    width: 100%; /* Make buttons full-width on smaller screens */
+    font-size: 1.3rem;
+    width: 100%;
   }
 }
 
 /* Gender icon styling */
 .gender-icon {
-  font-size: 50px; /* Adjust size as needed */
-  color: #333; /* Adjust color as needed */
-  margin-bottom: 15px; /* Space between icon and title */
+  font-size: 50px;
+  color: #4CAF50; /* Light green for gender icon */
+  margin-bottom: 15px;
 }
+
+.profile-name {
+  color: #000; /* Black color */
+}
+
